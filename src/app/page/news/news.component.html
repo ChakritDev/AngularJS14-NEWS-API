@@ -42,7 +42,7 @@
                     <button type="button" class="btn btn-info m-1 rounded-circle">
                       <i class="fa fa-file-alt"></i>
                     </button>
-                    <button type="button" class="btn btn-light m-1" (click)="triggerModal()">
+                    <button type="button" class="btn btn-light m-1" (click)="triggerModal()" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       <i class="fa fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-danger m-1 rounded-circle">
@@ -61,6 +61,39 @@
   </div>
 </div>
 
-<div class="#modalData let-model modal-dialog modal-dialog-centered">
-  ...
+<!-- Modal -->
+<div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="exampleModalLabel">รายละเอียดข่าวประชาสัมพันธ์</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row py-2">
+          <div class="col-12 d-inline-flex">
+            <label class="form-label col-2 text-end m-3" for="title-news"> ชื่อเรื่อง <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="titleNews" id="titleNews">
+          </div>
+        </div>
+        <div class="row py-2">
+          <div class="col-12 d-inline-flex">
+            <label class="form-label col-2 text-end m-3" for="title-news"> เนื้อหา <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" name="titleNews" id="titleNews">
+          </div>
+        </div>
+        <div class="row py-2">
+          <div class="col-12 d-inline-flex">
+            <label class="form-check-label col-2 text-end m-3" for="nav-toggle-button">สถานะ</label>
+            <div class="col-12 form-check form-switch m-3">
+              <input class="form-check-input mh-75" type="checkbox" id="nav-toggle-button" >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
